@@ -25,6 +25,33 @@ input.value="";
 document.getElementById("typing").remove();
 
 let q = message.toLowerCase();
+    if(q === "start quiz"){
+
+chat.innerHTML+=`
+<div class="bot">
+🤖 <b>Study Quiz</b><br><br>
+
+Question 1️⃣
+
+What is the capital of India?
+
+A) Mumbai
+
+B) New Delhi
+
+C) Kolkata
+
+D) Chennai
+
+Type only A, B, C or D.
+</div>
+`;
+
+input.value="";
+chat.scrollTop=chat.scrollHeight;
+return;
+
+}
 
 let answer = "";
 
@@ -111,10 +138,24 @@ answer = "📏 Perimeter is the total distance around a shape.";
 else if(q.includes("study tip")){
 answer = "💡 Study for 25–30 minutes, take a short break, then continue.";
 }
+else if(q=="b"){
+
+answer="✅ Correct! New Delhi is the capital of India.";
+
+}
+
+else if(q=="a" || q=="c" || q=="d"){
+
+answer="❌ Wrong answer. Correct answer: B) New Delhi.";
+
+}
 
 else{
-answer = "📚 Sorry, I don't know that yet. I will learn more topics in future updates.";
+
+answer="📚 Sorry, I don't know that yet. I will learn more topics in future updates.";
+
 }
+
 
 chat.innerHTML+=`
 <div class="bot">
