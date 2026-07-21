@@ -149,7 +149,20 @@ else if(q=="a" || q=="c" || q=="d"){
 answer="❌ Wrong answer. Correct answer: B) New Delhi.";
 
 }
+else if(quiz==3 && q=="b"){
 
+score++;
+
+quiz=0;
+
+answer=`🎉 Quiz Finished!
+
+Your Score: ${score}/3
+
+Excellent work!`;
+
+}
+  
 else{
 
 answer="📚 Sorry, I don't know that yet. I will learn more topics in future updates.";
