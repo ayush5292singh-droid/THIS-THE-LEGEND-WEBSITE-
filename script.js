@@ -1,3 +1,7 @@
+let score = 0;
+let quiz = 0;
+
+function send(){
 function send(){
 
 let input=document.getElementById("input");
@@ -25,13 +29,16 @@ input.value="";
 document.getElementById("typing").remove();
 
 let q = message.toLowerCase();
-    if(q === "start quiz"){
+    if(q=="start quiz"){
+
+score=0;
+quiz=1;
 
 chat.innerHTML+=`
 <div class="bot">
-🤖 <b>Study Quiz</b><br><br>
+🤖 <b>Quiz Started!</b><br><br>
 
-Question 1️⃣
+Question 1/3
 
 What is the capital of India?
 
@@ -39,16 +46,18 @@ A) Mumbai
 
 B) New Delhi
 
-C) Kolkata
+C) Chennai
 
-D) Chennai
+D) Kolkata
 
 Type only A, B, C or D.
 </div>
 `;
 
-input.value="";
 chat.scrollTop=chat.scrollHeight;
+
+input.value="";
+
 return;
 
 }
@@ -138,15 +147,51 @@ answer = "📏 Perimeter is the total distance around a shape.";
 else if(q.includes("study tip")){
 answer = "💡 Study for 25–30 minutes, take a short break, then continue.";
 }
-else if(q=="b"){
+else if(quiz==1 && q=="b"){
 
-answer="✅ Correct! New Delhi is the capital of India.";
+score++;
+
+quiz=2;
+
+answer=`✅ Correct!
+
+Score: ${score}/1
+
+Question 2/3
+
+What is H₂O?
+
+A) Oxygen
+
+B) Hydrogen
+
+C) Water
+
+D) Helium`;
 
 }
 
-else if(q=="a" || q=="c" || q=="d"){
+else if(quiz==2 && q=="c"){
 
-answer="❌ Wrong answer. Correct answer: B) New Delhi.";
+score++;
+
+quiz=3;
+
+answer=`✅ Correct!
+
+Score: ${score}/2
+
+Question 3/3
+
+Who discovered gravity?
+
+A) Einstein
+
+B) Newton
+
+C) Edison
+
+D) Tesla`;
 
 }
 else if(quiz==3 && q=="b"){
@@ -159,15 +204,17 @@ answer=`🎉 Quiz Finished!
 
 Your Score: ${score}/3
 
-Excellent work!`;
+Excellent Work!`;
 
 }
-  
+
 else{
 
 answer="📚 Sorry, I don't know that yet. I will learn more topics in future updates.";
 
 }
+
+
 
 
 chat.innerHTML+=`
