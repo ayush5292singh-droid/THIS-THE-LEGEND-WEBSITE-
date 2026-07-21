@@ -60,8 +60,60 @@ else if(q.includes("periodic table")){
 answer = "🧪 The periodic table organizes chemical elements according to their atomic number.";
 }
 
+else if(q.includes("force")){
+answer = "⚡ Force is a push or pull acting on an object. SI unit: Newton (N).";
+}
+
+else if(q.includes("speed")){
+answer = "🚗 Speed = Distance ÷ Time.";
+}
+
+else if(q.includes("velocity")){
+answer = "🏃 Velocity is speed in a particular direction.";
+}
+
+else if(q.includes("cell")){
+answer = "🧬 A cell is the basic structural and functional unit of life.";
+}
+
+else if(q.includes("atom")){
+answer = "⚛️ An atom is the smallest unit of an element.";
+}
+
+else if(q.includes("democracy")){
+answer = "🏛️ Democracy is a form of government in which people elect their representatives.";
+}
+
+else if(q.includes("noun")){
+answer = "📖 A noun is the name of a person, place, thing or idea.";
+}
+
+else if(q.includes("verb")){
+answer = "✍️ A verb is a word that shows an action or state.";
+}
+
+else if(q.includes("adjective")){
+answer = "📝 An adjective describes or modifies a noun.";
+}
+
+else if(q.includes("prime number")){
+answer = "🔢 A prime number has exactly two factors: 1 and itself.";
+}
+
+else if(q.includes("area of circle")){
+answer = "⭕ Area of a circle = πr².";
+}
+
+else if(q.includes("perimeter")){
+answer = "📏 Perimeter is the total distance around a shape.";
+}
+
+else if(q.includes("study tip")){
+answer = "💡 Study for 25–30 minutes, take a short break, then continue.";
+}
+
 else{
-answer = "📚 Sorry, I don't know that yet. More study topics will be added in future upgrades.";
+answer = "📚 Sorry, I don't know that yet. I will learn more topics in future updates.";
 }
 
 chat.innerHTML+=`
