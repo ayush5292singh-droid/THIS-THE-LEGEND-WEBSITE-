@@ -197,3 +197,32 @@ font-size:14px;
 .tools button:hover{
 opacity:0.9;
 }
+.dark{
+
+background:#111827;
+
+color:white;
+
+}
+
+.dark .container{
+
+background:#1f2937;
+
+}
+
+.dark .messages{
+
+background:#111827;
+
+}
+
+.dark input{
+
+background:#374151;
+
+color:white;
+
+border:none;
+
+}
