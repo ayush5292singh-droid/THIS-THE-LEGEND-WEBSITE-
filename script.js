@@ -237,7 +237,9 @@ chat.innerHTML+=`
 ${answer}
 </div>
 ;
-    
+
+  increaseProgress();
+
 chat.scrollTop=chat.scrollHeight;
 
 },1000);
@@ -298,5 +300,18 @@ let goal=prompt("Enter today's study goal (Cancel to skip)");
 if(goal){
 
 alert("🎯 Today's Goal:\n"+goal);
+
+}
+let progress=0;
+
+function increaseProgress(){
+
+if(progress<100){
+
+progress+=10;
+
+document.getElementById("bar").value=progress;
+
+}
 
 }
