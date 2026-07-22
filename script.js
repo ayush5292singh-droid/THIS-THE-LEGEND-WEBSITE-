@@ -254,3 +254,28 @@ function planner(){
 alert("📅 Study Plan\n\n1. Maths\n2. Science\n3. English\n4. Revision");
 
 }
+function calculator(){
+
+let a=prompt("Enter first number");
+
+let b=prompt("Enter second number");
+
+alert("Answer = "+(Number(a)+Number(b)));
+
+}
+
+function notes(){
+
+let note=prompt("Write your note");
+
+localStorage.setItem("note",note);
+
+alert("Note Saved!");
+
+}
+
+function planner(){
+
+alert("📅 Study Plan\n\n1. Maths\n2. Science\n3. English\n4. Revision");
+
+}
