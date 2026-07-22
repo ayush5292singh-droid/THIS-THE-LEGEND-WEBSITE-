@@ -205,7 +205,21 @@ answer=`🎉 Quiz Finished!
 Your Score: ${score}/3
 
 Excellent Work!`;
+function toggleTheme(){
 
+document.body.classList.toggle("dark");
+
+localStorage.setItem(
+"theme",
+document.body.classList.contains("dark")
+);
+
+}
+  if(localStorage.getItem("theme")=="true"){
+
+document.body.classList.add("dark");
+
+}
 }
 
 else{
@@ -277,5 +291,12 @@ alert("Note Saved!");
 function planner(){
 
 alert("📅 Study Plan\n\n1. Maths\n2. Science\n3. English\n4. Revision");
+
+}
+let goal=prompt("Enter today's study goal (Cancel to skip)");
+
+if(goal){
+
+alert("🎯 Today's Goal:\n"+goal);
 
 }
