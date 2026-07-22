@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>StudyGenius AI</title>
 
 <link rel="stylesheet" href="style.css">
@@ -20,13 +19,9 @@
 <p>Your Personal Study Assistant</p>
 
 <div id="profile">
-
 👤 Student
-
 <br>
-
 ⭐ Beginner
-
 </div>
 
 </div>
@@ -34,60 +29,81 @@
 <div id="messages" class="messages">
 
 <div class="bot">
-🤖 <b>StudyGenius AI</b><br><br>
+🤖 <b>StudyGenius AI</b>
 
-Hello! 👋
+<br><br>
+
+Hello 👋
 
 I can help you with:
 
-📘 Mathematics<br>
-🧪 Science<br>
-🌍 Geography<br>
-📖 History<br>
-🇬🇧 English<br>
-📝 Quiz Practice<br>
-💡 Study Tips
-</div>
-👋 Hello! I am <b>StudyGenius AI</b>.
-
-Ask me about:
 <br><br>
 
-📘 Maths<br>
-🧪 Science<br>
-🌍 Geography<br>
-📖 History<br>
-🇬🇧 English
+📘 Mathematics
+
+<br>
+
+🧪 Science
+
+<br>
+
+📖 English
+
+<br>
+
+🌍 Geography
+
+<br>
+
+🏛 History
+
+<br>
+
+📝 Quiz
+
+<br>
+
+💡 Study Tips
+
+</div>
+
+</div>
+
+<div class="progress">
+
+📊 Study Progress
+
+<progress
+id="bar"
+value="0"
+max="100">
+</progress>
 
 </div>
 
 <div class="tools">
 
-<button onclick="calculator()">🧮 Calculator</button>
+<button onclick="calculator()">🧮</button>
 
-<button onclick="notes()">📝 Notes</button>
+<button onclick="notes()">📝</button>
 
-<button onclick="planner()">📅 Planner</button>
-<button onclick="toogle theme ()">⭐️Theme</button>
-  
-</div>
-<div class="progress">
+<button onclick="planner()">📅</button>
 
-📊 Progress
-
-<progress id="bar" value="0" max="100"></progress>
+<button onclick="toggleTheme()">🌙</button>
 
 </div>
+
 <div class="input-area">
-  
 
 <input
 id="input"
-placeholder="Ask your study question..."
+placeholder="Ask anything about your studies..."
 >
 
 <button onclick="send()">
+
 Send
+
 </button>
 
 </div>
