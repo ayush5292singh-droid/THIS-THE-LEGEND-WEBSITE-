@@ -177,3 +177,23 @@ opacity:1;
 transform:translateY(0);
 }
 }
+.tools{
+display:flex;
+justify-content:space-around;
+padding:10px;
+background:#eef4ff;
+}
+
+.tools button{
+padding:10px;
+border:none;
+border-radius:10px;
+background:#2563eb;
+color:white;
+cursor:pointer;
+font-size:14px;
+}
+
+.tools button:hover{
+opacity:0.9;
+}
